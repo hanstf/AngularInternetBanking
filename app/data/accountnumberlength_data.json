@@ -1,0 +1,55 @@
+{
+    "status": "ok",
+    "data": [
+        {
+            "bankcode": "maybank",
+            "numlength": {
+                "ft":"12",
+                "ln":"12"
+            }
+        },
+        {
+            "bankcode": "RHB",
+            "numlength": {
+                "ft":"14",
+                "ln":"12,14,15"
+            }
+        },{
+            "bankcode": "CIMB",
+            "numlength": {
+                "ft":"14",
+                "ln":"14"
+            }
+        },{
+            "bankcode": "HSBC",
+            "numlength": {
+                "ft":"12",
+                "ln":"12,14"
+            }
+        },{
+            "bankcode": "Public",
+            "numlength": {
+                "ft":"10",
+                "ln":"15"
+            }
+        },{
+            "bankcode": "Bank Islam",
+            "numlength": {
+                "ft":"14",
+                "ln":"14"
+            }
+        },{
+            "bankcode": "Hong Leong",
+            "numlength": {
+                "ft":"11,13",
+                "ln":"11,13"
+            }
+        },{
+            "bankcode": "OCBC",
+            "numlength": {
+                "ft":"10",
+                "ln":"10"
+            }
+        }
+    ]
+}

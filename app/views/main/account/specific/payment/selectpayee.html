@@ -1,0 +1,110 @@
+<div class="uk-grid uk-margin-top uk-margin-bottom" data-uk-grid-margin>
+    <div class="uk-width-1-1">
+        <div class=" tm-trans-nav">
+            <ul class="uk-tab ">
+
+                <li class="uk-width-small-1-2"><a ng-click="switchPaytype(payTypelist[0])" ng-class="{'tm-trans-nav-active':payTypeClass('favourite')}">Favourite Payment</a>
+                </li>
+                <li class=" uk-width-small-1-2"><a ng-click="switchPaytype(payTypelist[1])" ng-class="{'tm-trans-nav-active':payTypeClass('payee')}">Payee Payment</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+
+    </div>
+
+
+</div>
+<div class="uk-grid uk-margin-top uk-margin-bottom" data-uk-grid-margin>
+    <div class="uk-width-1-1">
+        <div class="uk-grid">
+            <div class="uk-width-1-1" data-uk-margin>
+
+
+                <form class="uk-form">
+
+                    <div id="switch-multiple-1" ng-switch on="payType">
+                        <div class="uk-active" ng-switch-when="favourite">
+                            <div class="uk-container tm-contact-list-container">
+                                <ul class="uk-grid uk-grid-width-1-4 tm-contact-list">
+                                    <li>
+                                        <h1 class=" uk-margin-remove ">T<span class="uk-h5">nb Berhad</span></h1>
+                                        <p class="uk-align-right uk-margin-remove">TENAGA NATIONAL </p>
+                                        <p class="uk-align-right uk-margin-remove">Bill No. 827388</p>
+                                    </li>
+                                    <li>
+                                        <h1 class=" uk-margin-remove ">T<span class="uk-h5">nb Berhad</span></h1>
+                                        <p class="uk-align-right uk-margin-remove">TENAGA NATIONAL </p>
+                                        <p class="uk-align-right uk-margin-remove">Bill No. 827388</p>
+                                    </li>
+                                    <li>
+                                        <h1 class=" uk-margin-remove ">T<span class="uk-h5">nb Berhad</span></h1>
+                                        <p class="uk-align-right uk-margin-remove">TENAGA NATIONAL </p>
+                                        <p class="uk-align-right uk-margin-remove">Bill No. 827388</p>
+                                    </li>
+<li>
+                                        <h1 class=" uk-margin-remove ">T<span class="uk-h5">nb Berhad</span></h1>
+                                        <p class="uk-align-right uk-margin-remove">TENAGA NATIONAL </p>
+                                        <p class="uk-align-right uk-margin-remove">Bill No. 827388</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div ng-switch-when="payee">
+                            <fieldset data-uk-margin>
+
+                                <div class="uk-width-medium-1-2 uk-width-small-1-1">
+
+                                    <h3><b>Payee Name</b></h3>
+                                    <div class="uk-grid uk-padding-remove uk-margin-remove">
+                                        <select name="" id="" class="uk-form-large uk-width-medium-1-1 uk-width-small-1-1">
+                                            <option>TNB</option>
+                                            <option>TT Dot Com</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="uk-grid uk-margin-top">
+                                    <div class="uk-width-medium-1-2 uk-width-small-1-1">
+                                        <h3><b>Bill No.</b></h3>
+
+                                        <input type="text" placeholder="Bill No" class="uk-width-medium-1-1 uk-width-small-1-1 uk-form-large">
+
+                                    </div>
+
+
+                                    <div class="uk-width-medium-1-2 uk-width-small-1-1">
+
+
+                                        <h3><b>Aliases</b></h3>
+
+
+
+                                        <input type="text" placeholder="Aliases" class="uk-width-medium-1-1 uk-width-small-1-1 uk-form-large">
+
+                                    </div>
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>

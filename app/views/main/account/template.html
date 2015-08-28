@@ -1,0 +1,162 @@
+<div ng-init="mappedtask = getMappedTask(removeSpace(getAccountDetails().accounttype))">
+  
+    <div class="uk-width-1-1 tm-no-space-small uk-visible-small ">
+        <ul class="uk-grid uk-grid-width-1-4 tm-mobile-menu">
+            <li ng-repeat="task in mappedtask" ng-click="gotoAccountSpecific(task, accountData)">
+                <p ng-class="{'tm-bold':mainAccountNavSelected('/account/details/'+removeSpace(task))}">{{task | titleCase}}</p>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="uk-width-1-1">
+
+        <div class="uk-grid">
+
+            <!-- Main content begin here -->
+            <div class="uk-width-medium-8-10 uk-width-small-1-1  ">
+                <div class="uk-panel uk-panel-box uk-panel-box-secondary tm-main-panel">
+                    <div class="uk-grid">
+                        <div class="uk-width-medium-5-10 uk-width-small-1-1">
+                            <div class="uk-align-left">
+                                <h3 class="uk-margin-remove"><b>{{getAccountDetails().accounttype | titleCase}} Account</b></h3>
+                                <b>{{getAccountDetails().accountnumber}}</b>
+                            </div>
+                        </div>
+                        <div class="uk-width-medium-5-10 uk-width-small-1-1">
+                            <div class="uk-grid uk-hidden-small">
+
+                                <div class="uk-width-3-6 uk-padding-remove tm-available-balance">
+                                    <b>Available Balance:</b>
+                                </div>
+                                <div class="uk-width-1-6 tm-currency">
+                                    <b>{{getAccountDetails().currency}}</b>
+                                </div>
+                                <div class="uk-width-2-6 uk-padding-remove">
+                                    <div class="uk-h2 tm-text-vertical-align-top">
+
+                                        {{getAccountDetails().availablebalance}}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-visible-small uk-margin-top">
+                                <b>Available Balance: {{getAccountDetails().currency}} {{getAccountDetails().availablebalance}}</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-margin-top">
+                        <div  ng-repeat="task in mappedtask" >
+                            <div ng-if="specificContent() == removeSpace(task)">
+                                <div ng-include="'/views/main/account/specific/'+removeSpace(task)+'/template.html'"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <!-- Main content ends here -->
+            <!-- Navigation begin here -->
+            <div class="uk-width-2-10 uk-hidden-small">
+                <div class="uk-grid">
+                    <div class="uk-width-2-10">
+                        <ul class="nav uk-nav uk-text-center tm-position-fixed">
+                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificOverview(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/overview')}">
+                                <p class="uk-margin-small-top">
+
+                                    Overview
+                                    <br>
+                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
+                                </p>
+                            </li>
+                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificTransfer(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/transfer')}">
+                                <p class="uk-margin-small-top">
+                                    Transfer
+                                    <br>
+                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
+                                </p>
+                            </li>
+                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificPayment(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/payment')}">
+                                <p class="uk-margin-small-top">
+                                    Payment
+                                    <br>
+                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
+                                </p>
+                            </li>
+                            <li class="main-account-nav-button">
+                                <p class="uk-margin-small-top">
+                                    Statement Request
+                                    <br>
+                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Navigation ends here -->
+        </div>
+        <div class="container main-account-list">
+
+            <div id="frame" ang-sly>
+                <ul class="slidee">
+                    <li>
+
+                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
+                            <h4 class="uk-margin-remove"><b>Saving Account</b></h4>
+                            <b>02333332233</b>
+                            <hr>
+                            <b class="uk-align-right">Available Balance: 2333.98</b>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="uk-panel uk-panel-box   tm-account-list-panel">
+                            <h4 class="uk-margin-remove"><b>Current Account</b></h4>
+                            <b>02333332233</b>
+                            <hr>
+                            <b class="uk-align-right">Available Balance: 2333.98</b>
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
+                            <h4 class="uk-margin-remove"><b>Deposit Account</b></h4>
+                            <b>02333332233</b>
+                            <hr>
+                            <b class="uk-align-right">Available Balance: 2333.98</b>
+
+
+                        </div>
+
+                    </li>
+                    <li>
+
+                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
+                            <h4 class="uk-margin-remove"><b>Deposit Account</b></h4>
+                            <b>02333332233</b>
+                            <hr>
+                            <b class="uk-align-right">Available Balance: 2333.98</b>
+
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+            <div class="scrollbar">
+                <div class="handle">
+                    <div class="mousearea"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

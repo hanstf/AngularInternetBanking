@@ -1,0 +1,9 @@
+{
+
+	"status": "ok",
+	"data"  : [
+	{"firstname": "ashley","lastname":"cole", "age":"25"},
+	{"firstname": "hans","lastname":"coleww", "age":"21"},
+	{"firstname": "john","lastname":"colse", "age":"22"}
+	]
+}

@@ -1,0 +1,28 @@
+{
+    "listofpayee": [
+        {
+            "currency": "USD",
+            "errorcode": "0",
+            "name": "ASTRO BERHAD",
+            "payeeaccountcode": "ASTRO"
+        },
+        {
+            "currency": "USD",
+            "errorcode": "0",
+            "name": "SKYNET",
+            "payeeaccountcode": "SKYNET"
+        },
+        {
+            "currency": "USD",
+            "errorcode": "0",
+            "name": "SYABAS BERHAD",
+            "payeeaccountcode": "SYABAS"
+        },
+        {
+            "currency": "USD",
+            "errorcode": "0",
+            "name": "TELEKOM",
+            "payeeaccountcode": "TELEKOM"
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "accountlist": [
+        {
+            "accountnumber": "000017709160106",
+            "accounttype": "saving",
+            "accountstatus": "A",
+            "availablebalance": "22771.75",
+            "creditline": "CA",
+            "currency": "USD",
+            "floatamt": "0.0",
+            "ledgerbalance": "22771.75",
+            "odlimit": "0.0"
+        },
+        {
+            "accountnumber": "000017709160106",
+            "accounttype": "current",
+            "accountstatus": "A",
+            "availablebalance": "22771.75",
+            "creditline": "CA",
+            "currency": "USD",
+            "floatamt": "0.0",
+            "ledgerbalance": "22771.75",
+            "odlimit": "0.0"
+        },
+        {
+
+            "accountnumber": "000017709160106",
+            "accounttype": "fixed deposit",
+            "accountstatus": "A",
+            "availablebalance": "22771.75",
+            "creditline": "CA",
+            "currency": "USD",
+            "floatamt": "0.0",
+            "ledgerbalance": "22771.75",
+            "odlimit": "0.0"
+        }
+    ],
+    "status": "0",
+    "errorcode": "0",
+    "tracenum": "17532",
+    "txncode": "2001",
+    "userid": "DEMO"
+}

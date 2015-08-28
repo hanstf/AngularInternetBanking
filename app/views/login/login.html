@@ -1,0 +1,52 @@
+<div class="uk-grid uk-height-viewport uk-margin-remove" data-uk-grid-margin>
+
+    <div class="uk-hidden-small uk-width-medium-6-10 uk-width-large-7-10  uk-padding-remove" id="login-background" data-uk-grid-margin ng-cloak>
+        <div class="uk-grid">
+            <div class="uk-margin-left uk-width-large-8-10 uk-width-medium-9-10 ">
+                <div class="tm-overlay-bottom">
+                    <a id="login-info-btn" class="uk-icon-button uk-icon-large" ng-class="contentStatus ? 'uk-icon-close' : 'uk-icon-info'" ng-click="showContent()"></a>
+                    <div id="login-info-content" ng-show="contentStatus">For other online banking enquiries, call our Customer Care hotline at 1 300 880 900 or 603-2295 6100 if you're overseas (24 hours daily, including holidays).</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="uk-width-small-10-10 uk-width-large-3-10 uk-width-medium-4-10 uk-padding-remove " style="background-color:#494C50" data-uk-grid-margin>
+        <div class="uk-panel uk-panel-space ">
+            <div class="uk-grid uk-margin-large-top" data-uk-grid-margin>
+                <div class="uk-width-large-1-1 uk-text-center">
+                    <span class="tm-icon-extralarge uk-icon-bank" style="color:#ECF0F1"></span>
+                    <h2 class="uk-margin-small" style="color:#ECF0F1">BANK NAME</h2>
+                </div>
+            </div>
+            <div class="uk-grid uk-margin-large-top uk-text-center ">
+                <div class="uk-width-large-1-1 uk-text-center ">
+
+                    <div class="uk-grid" id="login-menu">
+                        <div class="uk-width-1-3 uk-padding-remove ">
+                            <a href="#login/login"><h6 class="tm-font-smaller" style="color:#ECF0F1">SIGN IN</h6></a>
+                        </div>
+                        <div class="uk-width-1-3 uk-padding-remove ">
+                            <a href="#login/forgetpass"><h6 class="tm-font-smaller" style="color:#ECF0F1">FORGOT PASSWORD</h6></a>
+                        </div>
+                        <div class="uk-width-1-3 uk-padding-remove ">
+                            <a href="#login/firsttime"><h6 class="tm-font-smaller" style="color:#ECF0F1">FIRST TIME</h6></a>
+                        </div>
+                    </div>
+
+                    <div class="uk-grid uk-text-center uk-margin-top-remove ">
+                       <div class="uk-width-1-1 uk-container-center">
+                        <div ng-switch on="loginContent()">
+                           
+                            <div ng-switch-when="login"><div ng-include="'/views/login/content/login.html'"></div></div>
+                            <div ng-switch-when="forgetpass"><div ng-include="'/views/login/content/forgetpass.html'"></div></div>
+                            <div ng-switch-when="firsttime"><div ng-include="'/views/login/content/firsttime.html'"></div></div>
+                            
+                        </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+@import 'variables';
+@import 'utilities';
+@import 'home';
+@import 'login';
+@import 'main';
+
+
+.ct-grids>line{
+        display:none;
+    }
+
+
+
+
+.off-canvas__container {
+  position: relative;
+}
+
+.off-canvas__nav {
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  -webkit-user-drag: none;
+z-index: 1030;
+} 

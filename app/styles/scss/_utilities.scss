@@ -1,0 +1,460 @@
+.tm-icon-extralarge {
+    font-size: 650%;
+    vertical-align: -70%;
+}
+
+.tm-font-smaller {
+    font-size: 80%;
+}
+
+.tm-button-transparent {
+    border: transparent;
+}
+
+.tm-size-triple {
+    max-height: 300%;
+    max-width: 300%;
+}
+
+.tm-position-relative {
+    position: relative;
+}
+
+.tm-position-fixed {
+    position: fixed;
+}
+
+.tm-display-inherit {
+    display: inherit;
+}
+
+.tm-whitespace-add {
+    text-indent: 3em;
+}
+
+.tm-overlay-bottom {
+    position: absolute;
+    bottom: 15px;
+    width: 55%;
+}
+
+@media screen and (min-width: 768px) {
+    .tm-margin-large-right-responsive {
+        margin-right:50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .tm-margin-large-right-responsive {
+        margin-right:5px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .tm-padding-remove-responsive{
+        padding:0px;
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .tm-padding-remove-responsive{
+        padding-left:35px;
+    }
+    
+}
+.tm-saving {
+    color: $color-saving-account;
+}
+
+.tm-current {
+    color: $color-current-account;
+}
+
+.tm-fixeddeposit {
+    color: $color-fixed-deposit-account;
+}
+.tm-loan {
+    color: $color-loan-account;
+}
+.tm-back-saving {
+    background-color: $color-saving-account;
+}
+
+.tm-back-current {
+    background-color: $color-current-account;
+}
+
+.tm-back-fixeddeposit {
+    background-color: $color-fixed-deposit-account;
+}
+.tm-back-loan {
+    background-color: $color-loan-account;
+}
+.tm-account-panel {
+    &:hover, &:focus {
+        background-color: $color-light-grey;
+    }
+}
+
+.tm-account-list-panel {
+    background-color: $color-fixed-deposit-account;
+}
+
+.tm-back-assets{
+    background-color: $color-assets;
+}
+.tm-back-liabilities{
+    background-color: $color-liabilities;
+}
+@media screen and (min-width: 768px) {
+.tm-history-chart-back>svg {
+    margin-top: -400px;
+    margin-left: -20px;
+}
+}
+@media screen and (min-width: 768px) {
+.tm-history-chart-front {
+    z-index: 1010;
+}
+}
+@media screen and (min-width: 768px) {
+.tm-history-chart-front>svg {
+    margin-bottom: -30px;
+    margin-left: -20px;
+}
+}
+
+@media screen and (max-width: 767px) {
+.tm-history-chart-back>svg {
+    margin-top: -500px;
+    margin-left: -20px;
+}
+}
+@media screen and (max-width: 767px) {
+.tm-history-chart-front {
+    z-index: 1010;
+}
+}
+@media screen and (max-width: 767px) {
+.tm-history-chart-front>svg {
+    margin-bottom: -30px;
+    margin-left: -20px;
+}
+}
+.tm-text-vertical-align-top {
+    vertical-align: text-top;
+}
+
+.tm-transaction-history-list {
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+ol.tm-step-tracker {
+    list-style-type: none;
+    
+}
+@media screen and (max-width: 767px) {
+ol.tm-step-tracker li {
+    display: inline-block;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 3em;
+    font-size: 0.8em;
+}
+}
+@media screen and (min-width: 768px) {
+ol.tm-step-tracker li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3em;
+}
+}
+ol.tm-step-tracker li:after {
+    content: "\00a0\00a0";
+}
+
+ol.tm-step-tracker li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+
+ol.tm-step-tracker li.tm-step-tracker-done {
+    color: black;
+    border-bottom: 4px solid $color-light-dark-grey
+}
+
+ol.tm-step-tracker li.tm-step-tracker-todo {
+    color: silver;
+    border-bottom: 4px solid silver;
+}
+
+ol.tm-step-tracker li.tm-step-tracker-done:before {
+    font-family: FontAwesome;
+    content: "\f00c";
+    color: white;
+    background-color: $color-light-dark-grey;
+    height: 1.2em;
+    width: 1.2em;
+    line-height: 1.2em;
+    border: none;
+    border-radius: 1.2em;
+}
+
+ol.tm-step-tracker li.tm-step-tracker-todo:before {
+    font-family: FontAwesome;
+    content: "\f10c";
+    color: silver;
+    background-color: $color-main-content;
+    font-size: 1.5em;
+    bottom: -1.6em;
+}
+@media screen and (max-width: 767px){
+.tm-trans-nav {
+    background-color: $color-main-background;
+    font-size: 0.8em;
+    text-align: center;
+}
+}
+@media screen and (min-width: 768px){
+.tm-trans-nav {
+    background-color: $color-main-background;
+    text-align: center;
+}
+}
+.tm-trans-nav ul li a {
+    color: black;
+}
+
+.tm-trans-nav-active {
+    background-color: $color-light-darker-grey !important;
+    color: black !important;
+}
+.tm-trans-nav-active:hover {
+    background-color: $color-light-darker-grey !important;
+    color: black !important;
+}
+@media screen and (max-width: 767px){
+.tm-main-panel {
+    
+    margin-top: -18px;
+
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+.tm-main-panel {
+    height: 500px;
+}
+}
+@media screen and (min-width: 1025px){
+.tm-main-panel {
+    height: 500px;
+}
+}
+.tm-main-next-icon {
+    margin-left: 20px;
+}
+
+.tm-main-next-icon:hover,
+.tm-main-next-icon:focus {
+    margin-left: 23px;
+    text-decoration: none;
+}
+
+.tm-main-next-icon span {
+    color: $color-light-dark-grey;
+}
+
+.tm-main-next-icon span:nth-child(1) {
+    margin-right: -20px;
+}
+
+.tm-contact-list-container {
+    height: 190px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-right: -10px;
+    padding-right: 0px;
+}
+
+.tm-contact-list {}
+@media screen and (min-width: 1024px) {
+.tm-contact-list li {
+    width:24%;
+    background-color: $color-light-darker-grey;
+    margin: 1px;
+    padding:4px;
+}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.tm-contact-list li {
+    width:32.3%;
+    background-color: $color-light-darker-grey;
+    margin: 1px;
+    padding:4px;
+}
+}
+@media screen and (max-width: 767px) {
+.tm-contact-list li {
+    width:47.5%;
+    background-color: $color-light-darker-grey;
+    margin: 1px;
+    padding:4px;
+}
+}
+
+@media screen and (max-width: 767px) {
+.tm-margin-small{
+    margin-top: 8px;
+}
+}
+
+.tm-margin-extra-large-top{
+    margin-top: 50px;    
+}
+.tm-navbar-small {
+    margin-left: 35px;
+    line-height: 80px;
+}
+.tm-bold {
+    font-weight: bold;
+}
+.tm-currency {
+    text-align: right;
+    padding:0px;
+    padding-right:5px;
+    margin-top: 5px;
+}
+.tm-available-balance {
+    text-align:right;    
+}
+.ct-saving {
+    stroke: $color-saving-account;
+}
+
+.ct-current {
+    stroke: $color-current-account;
+}
+
+.ct-fixeddeposit {
+    stroke: $color-fixed-deposit-account;
+}
+
+.ct-history {
+    stroke: $color-mild-grey;
+}
+.ct-loan{
+    stroke: $color-loan-account;    
+}
+.tm-footer {
+    background-color:$color-footer-color;
+}
+
+@media screen and (min-width: 1024px) {
+    .tm-margin-large-left-responsive{
+         margin-left:50px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .tm-margin-large-left-responsive{
+        margin-left:30px;
+    }
+}
+@media screen and (min-width: 1025px) {
+.ct-history>line {
+    stroke-width: 19px;
+    stroke-linecap: round;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.ct-history>line {
+    stroke-width: 11px;
+    stroke-linecap: round;
+}
+}
+@media screen and (max-width: 767px) {
+.ct-history>line {
+    stroke-width:12px;
+    stroke-linecap: round;
+}
+}
+
+.ct-back {
+    stroke: $color-light-darker-grey;
+}
+@media screen and (min-width: 1025px) {
+.ct-back>line {
+    stroke-width: 19px;
+    stroke-linecap: round;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+.ct-back>line {
+    stroke-width: 11px;
+    stroke-linecap: round;
+}
+}
+.tm-mobile-menu{
+font-size: 0.9em;
+text-align: center;
+}
+@media screen and (max-width: 767px) {
+.ct-back>line {
+    stroke-width:12px;
+    stroke-linecap: round;
+}
+}
+
+.tm-add-z-index {
+    z-index: 1030;
+}
+
+.tm-icon-mobile{
+    color: $color-light-grey;
+    position : absolute;
+    top: -20px;
+}
+@media screen and (max-width: 767px) {
+.tm-no-space-small{
+    margin-top:-20px;
+    margin-bottom: 35px;
+}
+}
+.tm-btn-next{
+    width: 49%;   
+    background-color: $color-dark-grey;
+}
+
+.tm-btn-next:hover{
+    background-color: $color-mild-grey;
+}
+.tm-btn-next:focus{
+    background-color: $color-mild-grey;
+}
+.tm-btn-next:active{
+    background-color: $color-dark-grey;
+}
+.tm-btn-next:visited{
+    background-color: $color-dark-grey;
+}
+.tm-btn-back{
+    width: 49%;   
+    background-color: $color-login-button;
+}
+.tm-btn-back:hover{
+    background-color: $color-login-button-hover;
+}
+.tm-btn-back:focus{
+    background-color: $color-login-button-hover;
+}
+.tm-btn-back:visited{
+    background-color: $color-login-button;
+}
+.tm-btn-back:active{
+    background-color: $color-login-button;
+}

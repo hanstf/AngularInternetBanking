@@ -1,0 +1,147 @@
+
+    <header class="uk-navbar uk-navbar-fixed tm-add-z-index uk-hidden-small " sticky>
+  
+    <div class="uk-grid">
+        <div class="uk-width-1-1 main-top-border">
+            <div class="uk-grid">
+                <!-- section for tablet and comp views-->
+                <div class="uk-width-large-2-10 uk-width-medium-2-10 uk-hidden-small uk-text-center tm-position-relative">
+                    <div class="main-logo">
+                        <span class="uk-icon-large uk-icon-bank uk-margin-top uk-margin-small-bottom "></span>
+                        <h2 class="uk-margin-small uk-h6">BANK NAME</h2>
+                    </div>
+                </div>
+                <div class="uk-width-large-3-10 uk-visible-large uk-margin-top uk-margin-bottom uk-padding-remove">
+                    <h2 class="uk-margin-bottom-remove">welcome,</h2>
+                    <h1 class="uk-margin-top-remove">HANS TJIPTO </h1>
+                </div>
+                <div class="uk-width-medium-2-10 uk-visible-medium uk-margin-top uk-margin-bottom uk-padding-remove">
+                    <h3 class="uk-margin-bottom-remove">welcome,</h3>
+                    <h2 class="uk-margin-top-remove">HANS TJIPTO </h2>
+                </div>
+                <!-- section end for tablet and comp views-->
+
+                <div class="uk-width-large-4-10 uk-width-medium-5-10 uk-hidden-small uk-push-1-10">
+
+                    <div class="uk-grid uk-align-right uk-margin-large-right">
+                        <div class="uk-width-1-1">
+                            <a ng-click="logOut()" class="uk-button main-button-logout"><i class="uk-icon-power-off uk-icon-small"></i></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="uk-grid uk-align-right  uk-margin-large-right ">
+                        <div class="uk-width-1-1">
+
+                            <h4 id="today-date">{{clock | date:'EEEE, dd MMMM yyyy, h:mm:ss a'}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</header>
+<div class="main-content uk-hidden-small uk-margin-large-bottom">
+    <div class="uk-grid">
+        <!-- navigation goes here -->
+
+        <div class="uk-width-medium-2-10 uk-hidden-small uk-float-left">
+            <ul class="nav uk-nav uk-text-center tm-position-fixed">
+                <li class="main-nav-selected">
+                    <p class="main-nav-button ">
+                        <span class="uk-icon-user uk-icon-small"></span>
+                        <br>Account
+                    </p>
+                </li>
+                <li>
+                    <p class="main-nav-button ">
+                        <span class="uk-icon-question uk-icon-small"></span>
+                        <br>Help
+                    </p>
+                </li>
+                <li>
+                    <p class="main-nav-button ">
+                        <span class="uk-icon-rocket uk-icon-small"></span>
+                        <br>Tour
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- section end for phone views-->
+        <div class="uk-width-medium-8-10 uk-hidden-small tm-padding-remove-responsive" id="content">
+            <!-- All of the main blocks will be injected here -->
+
+            <div ng-switch on="accountContent()">
+                <div ng-switch-when="overview">
+                    <div ng-include="'/views/main/account/overview.html'"></div>
+                </div>
+                <div ng-switch-when="details">
+                    <div ng-include="'/views/main/account/template.html'"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</div>
+
+<footer class="uk-position-bottom uk-hidden-small tm-footer"  sticky confine="true">
+    <div class="uk-grid">
+        <div class="uk-width-1-1">
+            <ul class="uk-subnav uk-float-right uk-margin-right uk-margin-small-top uk-margin-small-bottom">
+                <li class="uk-margin-top-remove uk-margin-left uk-margin-right"><a href="">Privacy Policy</a>
+                </li>
+                <li class="uk-margin-top-remove uk-margin-left uk-margin-right"><a href="">Terms & Condition</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</footer>
+ 
+
+
+
+<!-- section for phone views-->
+<div class="off-canvas__container off-canvas__content uk-visible-small">
+    <header class="uk-navbar uk-navbar-fixed tm-add-z-index">
+
+        <div class="uk-grid">
+            <div class="uk-width-1-1 main-top-border">
+                
+                <a class="uk-navbar-toggle uk-visible-small tm-navbar-small" ng-click="offcanvas.toggle()"></a>
+                <div class="uk-visible-small uk-text-center uk-navbar-center">
+                    <div class="main-logo">
+                        <span class="uk-icon-large uk-icon-bank uk-margin-top uk-margin-small-bottom "></span>
+                        <h2 class="uk-margin-small uk-h6">BANK NAME</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <div class="uk-margin-large-top uk-margin-large-bottom">
+        <div class="uk-grid">
+            <div class="uk-width-small-1-1 uk-visible-small tm-padding-remove-responsive" id="content">
+                <!-- All of the main blocks will be injected here -->
+
+                <div ng-switch on="accountContent()">
+                    <div ng-switch-when="overview">
+                        <div ng-include="'/views/main/account/overview.html'"></div>
+                    </div>
+                    <div ng-switch-when="details">
+                        <div ng-include="'/views/main/account/template.html'"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- section end for phone views-->

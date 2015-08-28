@@ -1,0 +1,32 @@
+{
+    "errorcode": "0",
+    "listofpayee": [
+        {
+            "billaccountno": "13375613",
+            "codetype": "B",
+            "currency": "USD",
+            "errorcode": "0",
+            "favoritename": "ASTRO HOME BILL",
+            "name": "ASTRO BERHAD",
+            "payeeaccountcode": "ASTRO"
+        },
+        {
+            "billaccountno": "23354234",
+            "codetype": "B",
+            "currency": "USD",
+            "errorcode": "0",
+            "favoritename": "SYABAS",
+            "name": "SYABAS BERHAD",
+            "payeeaccountcode": "SYABAS"
+        },
+        {
+            "billaccountno": "55776544",
+            "codetype": "B",
+            "currency": "USD",
+            "errorcode": "0",
+            "favoritename": "TM",
+            "name": "TELEKOM",
+            "payeeaccountcode": "TELEKOM"
+        }
+    ]
+}

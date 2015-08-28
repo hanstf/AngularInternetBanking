@@ -1,0 +1,11 @@
+{
+    "status": "ok",
+    "data": [
+        {"kn": "openbillpayment"},
+        {"kn": "3rdparty"},
+        {"kn": "otherbank"},
+        {"kn": "cardless"},
+        {"kn": "fdplacement"},
+        {"kn": "loanpayment"}
+    ]
+}

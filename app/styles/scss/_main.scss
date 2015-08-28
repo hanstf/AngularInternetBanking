@@ -1,0 +1,154 @@
+.main-body {
+    margin-top: 150px;
+}
+
+.main-saving-account {
+    color: $color-saving-account;
+}
+
+.main-current-account {
+    color: $color-current-account;
+}
+
+.main-fixed-deposit-account {
+    color: $color-fixed-deposit-account;
+}
+
+.main-button-logout {
+    padding-top: +5px;
+    padding-bottom: +5px;
+    padding-left: -5px;
+    padding-right: -5px;
+    background-color: $color-dark-grey;
+    color: $color-light-grey;
+    &:hover, &:focus {
+        background-color: $color-mild-grey;
+        color: $color-light-grey;
+        border-color: $color-mild-grey;
+    }
+}
+
+.main-top-border {
+    border-bottom: solid #858585 4px;
+    overflow: hidden;
+}
+
+.main-nav-selected,
+.main-nav-selected:hover {
+    background: $color-mild-grey;
+    height: 80px;
+    width: 80px;
+}
+
+.main-nav-selected:before {
+    border-left: 20px solid $color-mild-grey;
+    border-bottom: 40px solid transparent;
+    border-top: 40px solid transparent;
+    content: "";
+    height: 0;
+    left: 80px;
+    position: fixed;
+    width: 0;
+}
+
+.main-nav-button {
+    padding-top: 25%;
+    color: $color-form-white;
+}
+
+.main-account-nav-button {
+    margin-top: 5px;
+    padding: 5%;
+    padding-bottom: 0;
+    color: $color-form-white;
+    background-color: $color-mild-grey;
+}
+
+.main-account-nav-selected {
+    background: $color-darker-grey;
+    height: 80px;
+    width: 80px;
+}
+.main-account-nav-selected:hover {
+    background: $color-darker-grey;
+    height: 80px;
+    width: 80px;
+}
+@media screen and (min-width: 768px) {
+    .main-logo {
+        width: 70%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 100%;
+        background-color: $color-dark-grey;
+        & > span, & > h2 {
+            color: $color-light-grey;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .main-logo {
+        width: 100%;
+        height: 100%;
+        & > span, & > h2 {
+            color: $color-dark-grey;
+        }
+    }
+}
+@media screen and (min-width: 1024px)  {
+.main-account-list {
+    margin-left: 10%;
+    margin-right: 30%;
+    margin-top: -30px;
+    position: relative;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.main-account-list {
+    margin-left: 12%;
+    margin-right: 32%;
+    margin-top: -30px;
+    position: relative;
+}
+}
+.tm-overview-position{
+    margin-left: 5%;    
+    
+}
+
+.tm-transfer-position{
+    margin-left: 30%;    
+    
+}
+.tm-payment-position{
+    margin-left: 55%;    
+    
+}
+
+@media screen and (max-width: 767px) {
+.main-account-list {
+    margin-right:5%;
+    
+    
+    position: relative;
+}
+}
+
+.main-show-assets{
+	margin-left:$show-margin*2;
+	margin-top:-20px;
+	color:$color-main-content;
+	border:transparent;
+    position: fixed;
+}
+
+.main-show-liabilities{
+	margin-left:$show-margin*12;
+	margin-top:-20px;
+	color:$color-main-content;
+	border:transparent;
+    position: fixed;
+}
+.main-content{
+    margin-top:160px;    
+}

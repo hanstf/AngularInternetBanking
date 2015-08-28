@@ -1,0 +1,57 @@
+
+   <div class="uk-width-1-1">
+   
+    <h3 class="uk-margin-small-bottom"><span class="uk-icon uk-icon-pie-chart"></span>  Account Overview</h3>
+    <div class="uk-grid uk-visible-small uk-margin-large-top uk-align-center">
+        <h3 class="uk-width-1-2" ng-repeat="category in accountCategory" ng-click="hideAccountCategory(category.name)" ng-class="category.style">{{category.name | titleCase}}</h3>
+    </div>
+    <div class="uk-grid tm-margin-large-right-responsive">
+        <div class="uk-width-medium-1-2 uk-width-small-1-1" ng-repeat="category in accountCategory" ng-class="category.status" >
+            <span class="uk-align-left uk-icon-medium uk-icon-caret-up uk-visible-small" ng-class="category.iconposition"></span>
+            <div ng-attr-id="category.id" class="uk-panel uk-panel-box uk-panel-box-secondary" ng-class="category.background">
+                <div class="uk-grid">
+                    <div class="uk-width-1-2 ">
+                        <chartist class="ct-chart" chartist-data="category.chartdata" chartist-chart-type="Pie" chartist-chart-options="pieOptions" chartist-responsive-options="responsivePieOptions"></chartist>
+                    </div>
+                    <div class="uk-width-1-2">
+                        <div id="Title">
+                            <h3 class=" uk-margin-bottom-remove">Total {{category.name | titleCase}}</h3>
+                            <h4 class="uk-margin-remove">USD {{category.total}}</h4>
+
+
+                        </div>
+                        <ul class="uk-list" id="Assets-list">
+                            <!-- list of the assets looped -->
+                            <li ng-repeat="accountlist in category.data.accountlist">
+                                <ul class="uk-list ">
+                                    <li>
+                                        <p ng-class="'tm-'+removeSpace(accountlist.accounttype)">{{accountlist.accounttype | titleCase}}</p>
+                                    </li>
+                                    <li>
+                                        <p>{{accountlist.availablebalance}}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="assets-list" class="uk-grid uk-margin-top" ng-repeat="accountlist in category.data.accountlist">
+                <div class="uk-width-1-1">
+                    <div class="uk-panel uk-panel-box uk-panel-box-secondary" ng-click="gotoAccountSpecific('overview',accountlist)" ng-class="'tm-back-'+removeSpace(accountlist.accounttype)">
+                        <h4 class="uk-margin-remove"><b>{{accountlist.accounttype | titleCase}} Account</b><span class="uk-icon uk-icon-chevron-right uk-align-right"></span></h4>
+                        <b>{{accountlist.accountnumber}}</b>
+                        <hr>
+                        <b class="uk-align-right">Available Balance: {{accountlist.availablebalance}}</b>
+                    
+                    </div>
+                </div>
+            </div>
+
+        </div>
+ 
+    </div>
+
+
+</div>
