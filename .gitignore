@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 node_modules
 dist
 .tmp
 .sass-cache
 bower_components
-=======
-node_modules/
-bower_components/
-*.log
-
-build/
-dist/
->>>>>>> 399b70f46597a0a2b0a89e043d707ab5fe46b06c

@@ -1,8 +1,8 @@
 <div ng-init="mappedtask = getMappedTask(removeSpace(getAccountDetails().accounttype))">
-  
+
     <div class="uk-width-1-1 tm-no-space-small uk-visible-small ">
         <ul class="uk-grid uk-grid-width-1-4 tm-mobile-menu">
-            <li ng-repeat="task in mappedtask" ng-click="gotoAccountSpecific(task, accountData)">
+            <li ng-repeat="task in mappedtask" ng-click="gotoAccountSpecific(removeSpace(task), accountData)">
                 <p ng-class="{'tm-bold':mainAccountNavSelected('/account/details/'+removeSpace(task))}">{{task | titleCase}}</p>
             </li>
         </ul>
@@ -45,11 +45,11 @@
                         </div>
                     </div>
                     <div class="uk-margin-top">
-                        <div  ng-repeat="task in mappedtask" >
+                        <div ng-repeat="task in mappedtask">
                             <div ng-if="specificContent() == removeSpace(task)">
                                 <div ng-include="'/views/main/account/specific/'+removeSpace(task)+'/template.html'"></div>
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -64,31 +64,10 @@
                 <div class="uk-grid">
                     <div class="uk-width-2-10">
                         <ul class="nav uk-nav uk-text-center tm-position-fixed">
-                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificOverview(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/overview')}">
+                            <li class="main-account-nav-button" ng-repeat="task in mappedtask" ng-click="gotoAccountSpecific(removeSpace(task), accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/'+removeSpace(task))}">
                                 <p class="uk-margin-small-top">
 
-                                    Overview
-                                    <br>
-                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
-                                </p>
-                            </li>
-                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificTransfer(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/transfer')}">
-                                <p class="uk-margin-small-top">
-                                    Transfer
-                                    <br>
-                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
-                                </p>
-                            </li>
-                            <li class="main-account-nav-button" ng-click="gotoAccountSpecificPayment(accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/payment')}">
-                                <p class="uk-margin-small-top">
-                                    Payment
-                                    <br>
-                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
-                                </p>
-                            </li>
-                            <li class="main-account-nav-button">
-                                <p class="uk-margin-small-top">
-                                    Statement Request
+                                    {{task | titleCase}}
                                     <br>
                                     <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
                                 </p>
@@ -100,51 +79,19 @@
             </div>
             <!-- Navigation ends here -->
         </div>
+    </div>
+
+
         <div class="container main-account-list">
-
-            <div id="frame" ang-sly>
+            
+            <div id="frame" >
                 <ul class="slidee">
-                    <li>
-
-                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
-                            <h4 class="uk-margin-remove"><b>Saving Account</b></h4>
-                            <b>02333332233</b>
+                    <li ng-repeat="otherAccount in otherAccountData(getAccountDetails())"   ang-sly>
+                        <div class="uk-panel uk-panel-box" ng-class="'tm-back-'+removeSpace(otherAccount.accounttype)">
+                            <h4 class="uk-margin-remove"><b>{{otherAccount.accounttype | titleCase}}</b></h4>
+                            <b>{{otherAccount.accountnumber}}</b>
                             <hr>
-                            <b class="uk-align-right">Available Balance: 2333.98</b>
-                        </div>
-
-                    </li>
-                    <li>
-
-                        <div class="uk-panel uk-panel-box   tm-account-list-panel">
-                            <h4 class="uk-margin-remove"><b>Current Account</b></h4>
-                            <b>02333332233</b>
-                            <hr>
-                            <b class="uk-align-right">Available Balance: 2333.98</b>
-                        </div>
-
-                    </li>
-                    <li>
-
-                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
-                            <h4 class="uk-margin-remove"><b>Deposit Account</b></h4>
-                            <b>02333332233</b>
-                            <hr>
-                            <b class="uk-align-right">Available Balance: 2333.98</b>
-
-
-                        </div>
-
-                    </li>
-                    <li>
-
-                        <div class="uk-panel uk-panel-box  tm-account-list-panel">
-                            <h4 class="uk-margin-remove"><b>Deposit Account</b></h4>
-                            <b>02333332233</b>
-                            <hr>
-                            <b class="uk-align-right">Available Balance: 2333.98</b>
-
-
+                            <b class="uk-align-right">Available Balance: {{otherAccount.availablebalance}}</b>
                         </div>
 
                     </li>
@@ -156,7 +103,8 @@
                 </div>
             </div>
         </div>
-
-    </div>
+   
+   
+   
 
 </div>
