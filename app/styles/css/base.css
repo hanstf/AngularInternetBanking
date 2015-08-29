@@ -42,37 +42,37 @@
   .tm-padding-remove-responsive {
     padding-left: 35px; } }
 .tm-saving {
-  color: #3498db; }
+  color: #DADFE1; }
 
 .tm-current {
-  color: #2ecc71; }
+  color: #D2D7D3; }
 
 .tm-fixeddeposit {
-  color: #f1c40f; }
+  color: #95A5A6; }
 
 .tm-loan {
-  color: #c0392b; }
+  color: #bdc3c7; }
 
 .tm-back-saving {
-  background-color: #3498db; }
+  background-color: #DADFE1; }
 
 .tm-back-current {
-  background-color: #2ecc71; }
+  background-color: #D2D7D3; }
 
 .tm-back-fixeddeposit {
-  background-color: #f1c40f; }
+  background-color: #95A5A6; }
 
 .tm-back-loan {
-  background-color: #c0392b; }
+  background-color: #bdc3c7; }
 
 .tm-account-panel:hover, .tm-account-panel:focus {
   background-color: #ECF0F1; }
 
 .tm-back-assets {
-  background-color: #9b59b6; }
+  background-color: #ecf0f1; }
 
 .tm-back-liabilities {
-  background-color: #e74c3c; }
+  background-color: #ecf0f1; }
 
 @media screen and (min-width: 768px) {
   .tm-history-chart-back > svg {
@@ -248,19 +248,19 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
   text-align: right; }
 
 .ct-saving {
-  stroke: #3498db; }
+  stroke: #DADFE1; }
 
 .ct-current {
-  stroke: #2ecc71; }
+  stroke: #D2D7D3; }
 
 .ct-fixeddeposit {
-  stroke: #f1c40f; }
+  stroke: #95A5A6; }
 
 .ct-history {
   stroke: #646464; }
 
 .ct-loan {
-  stroke: #c0392b; }
+  stroke: #bdc3c7; }
 
 .tm-footer {
   background-color: #c1c0c0; }
@@ -576,13 +576,13 @@ body {
   margin-top: 150px; }
 
 .main-saving-account {
-  color: #3498db; }
+  color: #DADFE1; }
 
 .main-current-account {
-  color: #2ecc71; }
+  color: #D2D7D3; }
 
 .main-fixed-deposit-account {
-  color: #f1c40f; }
+  color: #95A5A6; }
 
 .main-button-logout {
   padding-top: +5px;
