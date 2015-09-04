@@ -22,23 +22,30 @@
     background-color: $color-dark-grey;
     color: $color-light-grey;
     &:hover, &:focus {
-        background-color: $color-mild-grey;
+        background-color: $color-light-dark-grey;
         color: $color-light-grey;
         border-color: $color-mild-grey;
     }
 }
 
 .main-top-border {
-    border-bottom: solid #858585 4px;
+    border-bottom: solid $color-blue-button 4px;
     overflow: hidden;
+    background-color: $color-mild-grey;
+    color: $color-light-grey;
+    
 }
-
+.main-header *{
+     color: $color-light-grey;
+}
 .main-nav-selected,
 .main-nav-selected:hover {
     background: $color-mild-grey;
+    border-left: 4px solid $color-blue-button-hover;
     height: 80px;
-    width: 80px;
+    width: 76px;
 }
+
 
 .main-nav-selected:before {
     border-left: 20px solid $color-mild-grey;
@@ -62,16 +69,24 @@
     padding-bottom: 0;
     color: $color-form-white;
     background-color: $color-mild-grey;
+     height: 70px;
+    text-align: right;
+    padding-right: 14px;
+    cursor:pointer;
+    width:85px;
+     line-height: 70px;
 }
 
 .main-account-nav-selected {
     background: $color-darker-grey;
-    height: 80px;
+    border-left: 5px solid $color-blue-button;
+    height: 70px;
     width: 80px;
 }
 .main-account-nav-selected:hover {
     background: $color-darker-grey;
-    height: 80px;
+    border-left: 5px solid $color-blue-button;
+    height: 70px;
     width: 80px;
 }
 @media screen and (min-width: 768px) {
@@ -91,7 +106,7 @@
         width: 100%;
         height: 100%;
         & > span, & > h2 {
-            color: $color-dark-grey;
+            color: $color-light-grey;
         }
     }
 }
@@ -99,7 +114,7 @@
 .main-account-list {
     margin-left: 10%;
     margin-right: 30%;
-    margin-top: -30px;
+    margin-top: -20px;
     position: relative;
 }
 }
@@ -127,13 +142,17 @@
 
 @media screen and (max-width: 767px) {
 .main-account-list {
-    margin-right:5%;
+    margin-top: 10px;
     
     
     position: relative;
 }
 }
-
+.main-nav-off-canvas-selected{
+    background-color: $color-dark-grey;
+    height: 80px;
+    
+}
 .main-show-assets{
 	margin-left:$show-margin*2;
 	margin-top:-20px;

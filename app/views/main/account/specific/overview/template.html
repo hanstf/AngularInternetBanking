@@ -1,10 +1,9 @@
 <div class="uk-visible-small"><span class="uk-icon uk-icon-caret-up tm-icon-mobile uk-icon-medium tm-overview-position"></span></div>
-<div class="uk-grid">
+<div class="uk-grid uk-margin-top">
    
     <div class="uk-width-medium-6-10 uk-width-small-1-1 ">
          
-        <chartist class="ct-chart uk-position-relative tm-history-chart-front" chartist-data="historyData" chartist-chart-type="Bar" chartist-chart-options="historybarOptions" chartist-responsive-options="responsiveBarOptions"></chartist>
-        <chartist class="ct-chart uk-position-relative tm-history-chart-back" chartist-data="fullData" chartist-chart-type="Bar" chartist-chart-options="backbarOptions" chartist-responsive-options="responsiveBarOptions"></chartist>
+        <div ng-include="'/views/main/account/specific/overview/'+removeSpace(getAccountDetails().accounttype)+'.html'"></div>
     </div>
     <div class="uk-width-medium-4-10 uk-width-small-1-1">
         <h3>Account Transaction</h3>
@@ -23,8 +22,8 @@
                     </div>
                     <div class="uk-grid uk-margin-top-remove">
                         <div class="uk-width-1-4 "></div>
-                        <div class="uk-width-3-4 uk-padding-remove">
-                            <li>USD 500,000</li>
+                        <div class="uk-width-3-4 ">
+                            <li>USD$ 500,000</li>
                         </div>
                     </div>
 

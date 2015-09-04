@@ -10,13 +10,13 @@
             <span class="uk-align-left uk-icon-medium uk-icon-caret-up uk-visible-small" ng-class="category.iconposition"></span>
             <div ng-attr-id="category.id" class="uk-panel uk-panel-box uk-panel-box-secondary" ng-class="category.background">
                 <div class="uk-grid">
-                    <div class="uk-width-1-2 ">
+                    <div class="uk-width-1-2 tm-smaller-font">
                         <chartist class="ct-chart" chartist-data="category.chartdata" chartist-chart-type="Pie" chartist-chart-options="pieOptions" chartist-responsive-options="responsivePieOptions"></chartist>
                     </div>
-                    <div class="uk-width-1-2">
+                    <div class="uk-width-1-2 tm-smaller-font">
                         <div id="Title">
-                            <h3 class=" uk-margin-bottom-remove">Total {{category.name | titleCase}}</h3>
-                            <h4 class="uk-margin-remove">USD {{category.total}}</h4>
+                            <h3 class=" uk-margin-bottom-remove tm-smaller-font">Total {{category.name | titleCase}}</h3>
+                            <h4 class="uk-margin-remove tm-smaller-font">{{category.total | currency:"USD$ "}}</h4>
 
 
                         </div>
@@ -25,10 +25,10 @@
                             <li ng-repeat="accountlist in category.data.accountlist">
                                 <ul class="uk-list ">
                                     <li>
-                                        <p ng-class="'tm-'+removeSpace(accountlist.accounttype)">{{accountlist.accounttype | titleCase}}</p>
+                                        <p  ng-class="'tm-'+removeSpace(accountlist.accounttype)">{{accountlist.accounttype | titleCase}}</p>
                                     </li>
                                     <li>
-                                        <p>{{accountlist.availablebalance}}</p>
+                                        <p class="uk-margin-small-left ">{{accountlist.availablebalance | currency:"USD$ "}}</p>
                                     </li>
                                 </ul>
                             </li>
@@ -39,12 +39,11 @@
             
             <div id="assets-list" class="uk-grid uk-margin-top" ng-repeat="accountlist in category.data.accountlist">
                 <div class="uk-width-1-1">
-                    <div class="uk-panel uk-panel-box uk-panel-box-secondary" ng-click="gotoAccountSpecific('overview',accountlist)" ng-class="'tm-back-'+removeSpace(accountlist.accounttype)">
-                        <h4 class="uk-margin-remove"><b>{{accountlist.accounttype | titleCase}} Account</b><span class="uk-icon uk-icon-chevron-right uk-align-right"></span></h4>
-                        <b>{{accountlist.accountnumber}}</b>
-                        <hr>
-                        <b class="uk-align-right">Available Balance: {{accountlist.availablebalance}}</b>
-                    
+                    <div class="uk-panel uk-panel-box uk-panel-box-secondary tm-account-list-back" ng-click="gotoAccountSpecific('overview',accountlist)" >
+                        <h4 class="uk-margin-remove tm-reduce-size-small" ng-class="'tm-back-'+removeSpace(accountlist.accounttype)"><b>{{accountlist.accounttype | titleCase}} Account</b><span class="uk-align-right"><b>{{accountlist.accountnumber}}</b></span></h4>
+                        <b class="uk-align-center uk-h1 tm-bottom-account"><span class="uk-h3 tm-text-vertical-align-top ">USD$</span> {{accountlist.availablebalance | currency:""}}</b>
+
+                        
                     </div>
                 </div>
             </div>

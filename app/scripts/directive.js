@@ -51,3 +51,14 @@ fypApp.directive('angSly', function ($timeout) {
         }
     }
 });
+fypApp.directive('validation', function(){
+    return{
+        restrict:"E",
+        scope:{
+            validationType: "=type"
+        },
+        templateUrl:"/views/directive/validation.html"
+        
+    }
+    
+});

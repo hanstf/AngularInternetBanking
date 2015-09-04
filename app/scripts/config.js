@@ -66,13 +66,30 @@ fypApp.config(function ($routeProvider) {
 
 fypApp.run(["$rootScope", "$location", function ($rootScope, $location) {
     $rootScope.$on("$routeChangeSuccess", function (userInfo) {
-       // console.log(userInfo);
+      
 
     });
-
+    
     $rootScope.$on("$routeChangeError", function (event, current, previous, eventObj) {
         if (eventObj.authenticated === false) {
             $location.path("/login");
         }
     });
+    
+    $rootScope.validation={
+    "wronguserpass": {
+        "status": false,
+        "icon": "uk-icon-warning", 
+        "message":"Wrong username or password",
+        "class": "tm-alert-danger",
+        "animate": false
+    },
+    "loginsuccess": {
+        "status": false,
+        "icon": "uk-icon-check", 
+        "message":"Successful Authentication",
+        "class": "tm-alert-success",
+        "animate": false
+    }
+};
 }]);

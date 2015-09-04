@@ -1,14 +1,14 @@
 
-                            <form action="#" class="uk-form">
+                            <form action="#" class="uk-form uk-margin-bottom">
                                 <fieldset>
                                     <span class="login-show-login uk-align-left uk-icon-medium uk-icon-caret-up"></span>
 
                                     <div class="uk-form-row">
-                                        <input type="text" placeholder="Username" class="transparent-button uk-width-1-1 uk-form-large" style="border:transparent" ng-model="userName">
+                                        <input type="text" placeholder="Username" class="transparent-button uk-width-1-1 uk-form-large " style="border:transparent" ng-class="{'tm-shake':validation.wronguserpass.animate}" ng-model="userName">
                                     </div>
 
                                     <div class="uk-form-row">
-                                        <input type="password" placeholder="Password" class="transparent-button uk-width-1-1 uk-form-large" style="border:transparent" ng-model="passWord">
+                                        <input type="password" placeholder="Password" class="transparent-button uk-width-1-1 uk-form-large" style="border:transparent" ng-class="{'tm-shake':validation.wronguserpass.animate}" ng-model="passWord">
                                     </div>
                                     <div class="uk-form-row">
                                         <a class="login-button uk-width-1-1 uk-button uk-button-primary uk-button-large" ng-click="login(userName, passWord)">LOGIN</a>
@@ -16,4 +16,7 @@
 
                                 </fieldset>
                             </form>
-                  
+                           
+                           <validation type="validation.wronguserpass" ></validation>
+                           <validation type="validation.loginsuccess" ></validation>
+                    

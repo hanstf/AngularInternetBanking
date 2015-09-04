@@ -17,13 +17,13 @@
 }
 
 .off-canvas__nav {
-  background-color: black;
-  color: white;
+  background-color: $color-darker-grey;
+  color:$color-light-grey;
   position: absolute;
   left: 0;
   top: 0;
-  width: 250px;
+  width: 100px;
   height: 100%;
   -webkit-user-drag: none;
-z-index: 1030;
+  z-index: 1030;
 } 

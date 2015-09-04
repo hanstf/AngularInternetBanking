@@ -40,39 +40,102 @@
     padding: 0px; } }
 @media screen and (max-width: 767px) {
   .tm-padding-remove-responsive {
-    padding-left: 35px; } }
+    padding-left: 35px;
+    padding-right: 10px; } }
 .tm-saving {
-  color: #DADFE1; }
+  color: #2ecc71; }
 
 .tm-current {
-  color: #D2D7D3; }
+  color: #27ae60; }
 
 .tm-fixeddeposit {
-  color: #95A5A6; }
+  color: #16a085; }
 
 .tm-loan {
-  color: #bdc3c7; }
+  color: #e67e22; }
 
 .tm-back-saving {
-  background-color: #DADFE1; }
+  background-color: #2ecc71;
+  color: #ECF0F1;
+  padding: 10px; }
 
 .tm-back-current {
-  background-color: #D2D7D3; }
+  background-color: #27ae60;
+  color: #ECF0F1;
+  padding: 10px; }
 
 .tm-back-fixeddeposit {
-  background-color: #95A5A6; }
+  color: #ECF0F1;
+  padding: 10px;
+  background-color: #16a085; }
 
 .tm-back-loan {
-  background-color: #bdc3c7; }
+  background-color: #e67e22;
+  color: #ECF0F1;
+  padding: 10px; }
+
+@media screen and (max-width: 767px) {
+  .tm-reduce-size-small {
+    font-size: 0.9em; } }
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .tm-reduce-size-small {
+    font-size: 0.85em; } }
+.tm-account-list-back {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e6e6e6; }
+  .tm-account-list-back:hover, .tm-account-list-back:focus {
+    cursor: pointer;
+    background-color: #d9d9d9; }
+
+.tm-account-details-back {
+  margin: 0px;
+  padding: 0px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #e6e6e6; }
 
 .tm-account-panel:hover, .tm-account-panel:focus {
   background-color: #ECF0F1; }
 
-.tm-back-assets {
-  background-color: #ecf0f1; }
-
-.tm-back-liabilities {
-  background-color: #ecf0f1; }
+@media screen and (max-width: 767px) {
+  .tm-back-assets {
+    background-color: #e5e5e5;
+    height: 280px; } }
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .tm-back-assets {
+    background-color: #e5e5e5;
+    height: 280px; } }
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .tm-back-assets {
+    background-color: #e5e5e5;
+    height: 220px; } }
+@media screen and (min-width: 1025px) {
+  .tm-back-assets {
+    background-color: #e5e5e5;
+    height: 200px; } }
+@media screen and (max-width: 767px) {
+  .tm-back-liabilities {
+    background-color: #e5e5e5;
+    height: 280px; } }
+@media screen and (min-width: 768px) and (max-width: 800px) {
+  .tm-back-liabilities {
+    background-color: #e5e5e5;
+    height: 280px; } }
+@media screen and (min-width: 801px) and (max-width: 1024px) {
+  .tm-back-liabilities {
+    background-color: #e5e5e5;
+    height: 220px; } }
+@media screen and (min-width: 1025px) {
+  .tm-back-liabilities {
+    background-color: #e5e5e5;
+    height: 200px; } }
+.tm-bottom-account {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  text-align: center; }
 
 @media screen and (min-width: 768px) {
   .tm-history-chart-back > svg {
@@ -97,7 +160,8 @@
     margin-bottom: -30px;
     margin-left: -20px; } }
 .tm-text-vertical-align-top {
-  vertical-align: text-top; }
+  vertical-align: 50%;
+  margin-right: -5px; }
 
 .tm-transaction-history-list {
   clear: both;
@@ -153,7 +217,7 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
   font-family: FontAwesome;
   content: "\f10c";
   color: silver;
-  background-color: #eeeeee;
+  background-color: #e6e6e6;
   font-size: 1.5em;
   bottom: -1.6em; }
 
@@ -170,11 +234,15 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
   color: black; }
 
 .tm-trans-nav-active {
-  background-color: #e2e3e3 !important;
+  border-bottom: solid #3498db 4px !important;
   color: black !important; }
 
 .tm-trans-nav-active:hover {
-  background-color: #e2e3e3 !important;
+  border-bottom: solid #3498db 4px !important;
+  color: black !important; }
+
+.tm-trans-nav-active:focus {
+  border-bottom: solid #3498db 4px !important;
   color: black !important; }
 
 @media screen and (max-width: 767px) {
@@ -248,22 +316,28 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
   text-align: right; }
 
 .ct-saving {
-  stroke: #DADFE1; }
+  stroke: #2ecc71; }
 
 .ct-current {
-  stroke: #D2D7D3; }
+  stroke: #27ae60; }
 
 .ct-fixeddeposit {
-  stroke: #95A5A6; }
+  stroke: #16a085; }
 
 .ct-history {
   stroke: #646464; }
 
 .ct-loan {
-  stroke: #bdc3c7; }
+  stroke: #e67e22; }
 
 .tm-footer {
-  background-color: #c1c0c0; }
+  background-color: #646464;
+  border-top: solid #3498db 4px; }
+
+.tm-footer-button {
+  color: #ECF0F1; }
+  .tm-footer-button:hover, .tm-footer-button:focus {
+    color: #e2e3e3; }
 
 @media screen and (min-width: 1024px) {
   .tm-margin-large-left-responsive {
@@ -271,6 +345,9 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .tm-margin-large-left-responsive {
     margin-left: 30px; } }
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .tm-smaller-font {
+    font-size: 1em; } }
 @media screen and (min-width: 1025px) {
   .ct-history > line {
     stroke-width: 19px;
@@ -314,37 +391,61 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
   .tm-no-space-small {
     margin-top: -20px;
     margin-bottom: 35px; } }
+.tm-alert-danger {
+  color: #ECF0F1;
+  background-color: #e74c3c; }
+
+.tm-alert-success {
+  color: #ECF0F1;
+  background-color: #2ecc71; }
+
 .tm-btn-next {
   width: 49%;
-  background-color: #494C50; }
+  background-color: #646464;
+  border-right: solid #3498db 6px !important; }
 
 .tm-btn-next:hover {
-  background-color: #646464; }
+  background-color: #747474;
+  border-right: solid #3498db 6px !important; }
 
 .tm-btn-next:focus {
-  background-color: #646464; }
+  background-color: #747474;
+  border-right: solid #3498db 6px !important; }
 
 .tm-btn-next:active {
-  background-color: #494C50; }
+  background-color: #646464;
+  border-right: solid #3498db 6px !important; }
 
 .tm-btn-next:visited {
-  background-color: #494C50; }
+  background-color: #646464;
+  border-right: solid #3498db 6px !important; }
 
 .tm-btn-back {
   width: 49%;
-  background-color: #84878c; }
+  background-color: #646464;
+  border-left: solid #e74c3c 6px !important; }
 
 .tm-btn-back:hover {
-  background-color: #b8bcc3; }
+  background-color: #747474;
+  border-left: solid #e74c3c 6px !important; }
 
 .tm-btn-back:focus {
-  background-color: #b8bcc3; }
+  background-color: #747474;
+  border-left: solid #e74c3c 6px !important; }
 
 .tm-btn-back:visited {
-  background-color: #84878c; }
+  background-color: #646464;
+  border-left: solid #e74c3c 6px !important; }
 
 .tm-btn-back:active {
-  background-color: #84878c; }
+  background-color: #646464;
+  border-left: solid #e74c3c 6px !important; }
+
+.tm-shake-add {
+  -webkit-animation: shake 1s;
+  -moz-animation: shake 1s;
+  -ms-animation: shake 1s;
+  animation: shake 1s; }
 
 html,
 body {
@@ -374,7 +475,6 @@ body {
   #frame {
     margin: 0px 0px;
     padding: 10px 0px;
-    width: 100%;
     height: 120px;
     overflow: hidden; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -419,7 +519,6 @@ body {
     height: 100%;
     margin-left: 5px;
     color: white;
-    width: 162px;
     cursor: pointer; } }
 @media screen and (min-width: 768px) and (max-width: 1022px) {
   .slidee li {
@@ -555,15 +654,16 @@ body {
 
 .login-button {
   margin-top: 13px;
-  background-color: #84878c;
+  border: 3px solid #3498db;
+  background-color: #646464;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   -ms-border-radius: 9px;
   border-radius: 9px; }
   .login-button:hover, .login-button:focus {
-    background-color: #84878c;
-    box-shadow: 0 0 5px #b8bcc3;
-    border-color: #b8bcc3; }
+    background-color: #646464;
+    box-shadow: 0 0 5px #2491d9;
+    border-color: #2491d9; }
 
 #login-info-content {
   color: white; }
@@ -576,13 +676,13 @@ body {
   margin-top: 150px; }
 
 .main-saving-account {
-  color: #DADFE1; }
+  color: #2ecc71; }
 
 .main-current-account {
-  color: #D2D7D3; }
+  color: #27ae60; }
 
 .main-fixed-deposit-account {
-  color: #95A5A6; }
+  color: #16a085; }
 
 .main-button-logout {
   padding-top: +5px;
@@ -592,19 +692,25 @@ body {
   background-color: #494C50;
   color: #ECF0F1; }
   .main-button-logout:hover, .main-button-logout:focus {
-    background-color: #646464;
+    background-color: #4e5357;
     color: #ECF0F1;
     border-color: #646464; }
 
 .main-top-border {
-  border-bottom: solid #858585 4px;
-  overflow: hidden; }
+  border-bottom: solid #3498db 4px;
+  overflow: hidden;
+  background-color: #646464;
+  color: #ECF0F1; }
+
+.main-header * {
+  color: #ECF0F1; }
 
 .main-nav-selected,
 .main-nav-selected:hover {
   background: #646464;
+  border-left: 4px solid #2491d9;
   height: 80px;
-  width: 80px; }
+  width: 76px; }
 
 .main-nav-selected:before {
   border-left: 20px solid #646464;
@@ -625,16 +731,24 @@ body {
   padding: 5%;
   padding-bottom: 0;
   color: #fff;
-  background-color: #646464; }
+  background-color: #646464;
+  height: 70px;
+  text-align: right;
+  padding-right: 14px;
+  cursor: pointer;
+  width: 85px;
+  line-height: 70px; }
 
 .main-account-nav-selected {
   background: #34363b;
-  height: 80px;
+  border-left: 5px solid #3498db;
+  height: 70px;
   width: 80px; }
 
 .main-account-nav-selected:hover {
   background: #34363b;
-  height: 80px;
+  border-left: 5px solid #3498db;
+  height: 70px;
   width: 80px; }
 
 @media screen and (min-width: 768px) {
@@ -651,12 +765,12 @@ body {
     width: 100%;
     height: 100%; }
     .main-logo > span, .main-logo > h2 {
-      color: #494C50; } }
+      color: #ECF0F1; } }
 @media screen and (min-width: 1024px) {
   .main-account-list {
     margin-left: 10%;
     margin-right: 30%;
-    margin-top: -30px;
+    margin-top: -20px;
     position: relative; } }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main-account-list {
@@ -675,8 +789,12 @@ body {
 
 @media screen and (max-width: 767px) {
   .main-account-list {
-    margin-right: 5%;
+    margin-top: 10px;
     position: relative; } }
+.main-nav-off-canvas-selected {
+  background-color: #494C50;
+  height: 80px; }
+
 .main-show-assets {
   margin-left: 10%;
   margin-top: -20px;
@@ -701,12 +819,12 @@ body {
   position: relative; }
 
 .off-canvas__nav {
-  background-color: black;
-  color: white;
+  background-color: #34363b;
+  color: #ECF0F1;
   position: absolute;
   left: 0;
   top: 0;
-  width: 250px;
+  width: 100px;
   height: 100%;
   -webkit-user-drag: none;
   z-index: 1030; }

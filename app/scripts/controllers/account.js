@@ -7,11 +7,11 @@
  * # MainCtrl
  * Controller of the angularFypApp
  */
-fypApp.controller('accountController', ['$scope', '$routeParams', '$timeout', 'authenticationService', 'pageNavigationService', 'accountService', 'detailService', '$location', function ($scope, $routeParams, $timeout, authenticationService, pageNavigationService, accountService, detailService, $location) {
-
+fypApp.controller('accountController', ['$scope', '$rootScope','$routeParams', '$timeout', 'authenticationService', 'pageNavigationService', 'accountService', 'detailService', '$location', function ($scope, $rootScope, $routeParams, $timeout, authenticationService, pageNavigationService, accountService, detailService, $location) {
+  
     $scope.accountTypeTaskMapping = [{
         "type": "saving",
-        "task": ["overview", "transfer", "payment", "statement request"]
+        "task": ["overview", "transfer", "payment", "statement request"],
     }, {
         "type": "current",
         "task": ["overview", "transfer", "payment", "cheque service", "statement request"]
@@ -172,9 +172,10 @@ fypApp.controller('accountController', ['$scope', '$routeParams', '$timeout', 'a
 
     }
     $scope.prevTransStep = function () {
+        $scope.transSteplist[$scope.transStep][1] = "tm-step-tracker-todo";
         $scope.transStep = $scope.transStep - 1;
         $scope.currentTransPosition = $scope.transSteplist[$scope.transStep][0];
-        $scope.transSteplist[$scope.transStep][1] = "tm-step-tracker-done";
+        
     }
     $scope.nextPayStep = function () {
         $scope.payStep = $scope.payStep + 1;
@@ -183,9 +184,10 @@ fypApp.controller('accountController', ['$scope', '$routeParams', '$timeout', 'a
 
     }
     $scope.prevPayStep = function () {
+        $scope.paySteplist[$scope.payStep][1] = "tm-step-tracker-todo";
         $scope.payStep = $scope.payStep - 1;
         $scope.currentPayPosition = $scope.paySteplist[$scope.payStep][0];
-        $scope.paySteplist[$scope.payStep][1] = "tm-step-tracker-done";
+        
     }
     $scope.checkNoBack = function (type) {
         if (type == "transfer") {
@@ -237,7 +239,9 @@ fypApp.controller('accountController', ['$scope', '$routeParams', '$timeout', 'a
 
     $scope.logOut = function () {
         authenticationService.deleteUserInfo().then(function () {
+            
             pageNavigationService.go('/login');
+           $rootScope.validation.loginsuccess.status = false;
         })
 
     }
@@ -394,11 +398,11 @@ fypApp.controller('accountController', ['$scope', '$routeParams', '$timeout', 'a
             width: '175px',
             height: '175px'
   }],
-  ['screen and (min-width: 768px) and (max-width: 1024px)', {
+  ['screen and (min-width: 769px) and (max-width: 1024px)', {
             width: '172px',
             height: '172px'
   }],
-  ['screen and (max-width: 767px)', {
+  ['screen and (max-width: 768px)', {
             width: '150px',
             height: '150px'
 

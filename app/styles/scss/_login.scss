@@ -28,13 +28,14 @@
 
 .login-button{
 	margin-top : 13px;
-	background-color : $color-login-button;
+    border: 3px solid $color-blue-button;
+    background-color: $color-mild-grey;
 	@include border-radius(9px);
 	
 	&:hover, &:focus{
-	background-color : $color-login-button;
-	box-shadow: 0 0 5px $color-login-button-hover;
-	border-color: $color-login-button-hover;
+	background-color : $color-mild-grey;
+	box-shadow: 0 0 5px $color-blue-button-hover;
+	border-color: $color-blue-button-hover;
 	}
 }
 

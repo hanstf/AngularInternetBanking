@@ -58,6 +58,7 @@
 @media screen and (max-width: 767px) {
     .tm-padding-remove-responsive{
         padding-left:35px;
+        padding-right:10px;
     }
     
 }
@@ -76,18 +77,58 @@
     color: $color-loan-account;
 }
 .tm-back-saving {
-    background-color: $color-saving-account;
+   background-color: $color-saving-account;
+     color:$color-light-grey;
+    padding: 10px;
 }
 
 .tm-back-current {
+  //border-left: 5px solid $color-current-account;
     background-color: $color-current-account;
+     color:$color-light-grey;
+    padding: 10px;
+    
 }
 
 .tm-back-fixeddeposit {
+      
+     color:$color-light-grey;
+    padding: 10px;
     background-color: $color-fixed-deposit-account;
 }
 .tm-back-loan {
-    background-color: $color-loan-account;
+       background-color: $color-loan-account;
+     color:$color-light-grey;
+    padding: 10px;
+   
+}
+@media screen and (max-width: 767px) {
+.tm-reduce-size-small{
+    font-size: 0.9em;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 800px)  {
+.tm-reduce-size-small{
+    font-size: 0.85em;
+}
+}
+.tm-account-list-back{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color:$color-light-medium-grey;
+    &:hover, &:focus{
+	    cursor:pointer;
+        background-color:$color-light-medium-grey-hover;
+	}
+}
+.tm-account-details-back{
+    margin: 0px;
+    padding: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color:$color-light-medium-grey;
 }
 .tm-account-panel {
     &:hover, &:focus {
@@ -95,11 +136,67 @@
     }
 }
 
-.tm-back-assets{
-    background-color: $color-assets;
+@media screen and (max-width: 767px){
+.tm-back-assets {
+    
+    background-color: $color-medium-grey;
+    height: 280px;
 }
+}
+@media screen and (min-width: 768px) and (max-width: 800px){
+.tm-back-assets{
+     background-color: $color-medium-grey;
+    
+        height: 280px;
+}
+}
+@media screen and (min-width: 801px) and (max-width: 1024px){
+.tm-back-assets{
+     background-color: $color-medium-grey;
+    height: 220px;
+}
+}
+@media screen and (min-width: 1025px){
+.tm-back-assets {
+    background-color: $color-medium-grey;
+    height: 200px;
+}
+}
+
+@media screen and (max-width: 767px){
+.tm-back-liabilities {
+    
+    background-color: $color-medium-grey;
+    height: 280px;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 800px){
 .tm-back-liabilities{
-    background-color: $color-liabilities;
+     background-color: $color-medium-grey;
+    
+        height: 280px;
+}
+}
+@media screen and (min-width: 801px) and (max-width: 1024px){
+.tm-back-liabilities{
+     background-color: $color-medium-grey;
+    height: 220px;
+}
+}
+@media screen and (min-width: 1025px){
+.tm-back-liabilities {
+    background-color: $color-medium-grey;
+    height: 200px;
+}
+}
+
+
+.tm-bottom-account{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    
+    text-align: center;
+    
 }
 @media screen and (min-width: 768px) {
 .tm-history-chart-back>svg {
@@ -137,7 +234,8 @@
 }
 }
 .tm-text-vertical-align-top {
-    vertical-align: text-top;
+    vertical-align: 50%;
+    margin-right: -5px;
 }
 
 .tm-transaction-history-list {
@@ -205,7 +303,7 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
     font-family: FontAwesome;
     content: "\f10c";
     color: silver;
-    background-color: $color-main-content;
+    background-color: $color-light-medium-grey;
     font-size: 1.5em;
     bottom: -1.6em;
 }
@@ -227,12 +325,16 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
 }
 
 .tm-trans-nav-active {
-    background-color: $color-light-darker-grey !important;
+    border-bottom: solid $color-blue-button 4px !important;
     color: black !important;
 }
 .tm-trans-nav-active:hover {
-    background-color: $color-light-darker-grey !important;
+   border-bottom: solid $color-blue-button 4px !important;
     color: black !important;
+}
+.tm-trans-nav-active:focus {
+     border-bottom: solid $color-blue-button 4px !important;
+        color: black !important;
 }
 @media screen and (max-width: 767px){
 .tm-main-panel {
@@ -348,9 +450,15 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
     stroke: $color-loan-account;    
 }
 .tm-footer {
-    background-color:$color-footer-color;
+    background-color:$color-mild-grey;
+    border-top: solid $color-blue-button 4px;
 }
-
+.tm-footer-button{
+    color:$color-light-grey;    
+    &:hover, &:focus{
+	color:$color-light-darker-grey;
+	}
+}
 @media screen and (min-width: 1024px) {
     .tm-margin-large-left-responsive{
          margin-left:50px;
@@ -360,6 +468,11 @@ ol.tm-step-tracker li.tm-step-tracker-todo:before {
     .tm-margin-large-left-responsive{
         margin-left:30px;
     }
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+.tm-smaller-font{
+    font-size: 1em;
+}
 }
 @media screen and (min-width: 1025px) {
 .ct-history>line {
@@ -421,36 +534,65 @@ text-align: center;
     margin-bottom: 35px;
 }
 }
+.tm-alert-danger{
+    color: $color-light-grey;
+    background-color: $color-alert-danger;
+}
+.tm-alert-success{
+    color: $color-light-grey;
+    background-color: $color-alert-success;
+}
 .tm-btn-next{
     width: 49%;   
-    background-color: $color-dark-grey;
+    background-color: $color-mild-grey;
+    border-right: solid $color-next-button 6px !important;
 }
 
 .tm-btn-next:hover{
-    background-color: $color-mild-grey;
+    background-color: $color-mild-grey-hover;
+    border-right: solid $color-next-button 6px !important;
 }
 .tm-btn-next:focus{
-    background-color: $color-mild-grey;
+    background-color: $color-mild-grey-hover;
+    border-right: solid $color-next-button 6px !important;
 }
 .tm-btn-next:active{
-    background-color: $color-dark-grey;
+    background-color: $color-mild-grey;
+    border-right: solid $color-next-button 6px !important;
 }
 .tm-btn-next:visited{
-    background-color: $color-dark-grey;
+    background-color: $color-mild-grey;
+    border-right: solid $color-next-button 6px !important;
 }
 .tm-btn-back{
     width: 49%;   
-    background-color: $color-login-button;
+    background-color: $color-mild-grey;
+    border-left: solid $color-back-button 6px !important;
 }
 .tm-btn-back:hover{
-    background-color: $color-login-button-hover;
+    background-color: $color-mild-grey-hover;
+    border-left: solid $color-back-button 6px !important;
 }
 .tm-btn-back:focus{
-    background-color: $color-login-button-hover;
+    background-color: $color-mild-grey-hover;
+    border-left: solid $color-back-button 6px !important;
 }
 .tm-btn-back:visited{
-    background-color: $color-login-button;
+    background-color: $color-mild-grey;
+    border-left: solid $color-back-button 6px !important;
 }
 .tm-btn-back:active{
-    background-color: $color-login-button;
+    background-color: $color-mild-grey;
+    border-left: solid $color-back-button 6px !important;
 }
+
+  
+.tm-shake-add {
+    -webkit-animation: shake 1s;
+    -moz-animation: shake 1s;
+    -ms-animation: shake 1s;
+    animation: shake 1s;
+  }
+
+
+

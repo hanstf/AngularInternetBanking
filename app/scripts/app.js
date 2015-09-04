@@ -24,9 +24,10 @@ var fypApp = angular
   ]);
 
 
+
 fypApp.factory("authenticationService", ['$http', '$q', '$sessionStorage', function ($http, $q, $sessionStorage) {
     var userInfo;
-
+    
     function login(userName, passWord) {
 
         var deferred = $q.defer();
@@ -41,6 +42,7 @@ fypApp.factory("authenticationService", ['$http', '$q', '$sessionStorage', funct
             $sessionStorage.userInfo = userInfo;
             deferred.resolve(userInfo);
         }, function (error) {
+            
             deferred.reject(error);
         });
 

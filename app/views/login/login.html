@@ -18,28 +18,28 @@
                     <h2 class="uk-margin-small" style="color:#ECF0F1">BANK NAME</h2>
                 </div>
             </div>
-            <div class="uk-grid uk-margin-large-top uk-text-center ">
+            <div class="uk-grid uk-margin-large-top uk-text-center" ng-swipe-left="goSpecificTask(right)" ng-swipe-right="goSpecificTask(left)">
                 <div class="uk-width-large-1-1 uk-text-center ">
 
                     <div class="uk-grid" id="login-menu">
                         <div class="uk-width-1-3 uk-padding-remove ">
-                            <a href="#login/login"><h6 class="tm-font-smaller" style="color:#ECF0F1">SIGN IN</h6></a>
+                            <a ng-click="goSpecificTask('login')" ><h6 class="tm-font-smaller" style="color:#ECF0F1">SIGN IN</h6></a>
                         </div>
                         <div class="uk-width-1-3 uk-padding-remove ">
-                            <a href="#login/forgetpass"><h6 class="tm-font-smaller" style="color:#ECF0F1">FORGOT PASSWORD</h6></a>
+                            <a ng-click="goSpecificTask('forgetpass')"  ><h6 class="tm-font-smaller" style="color:#ECF0F1">FORGOT PASSWORD</h6></a>
                         </div>
                         <div class="uk-width-1-3 uk-padding-remove ">
-                            <a href="#login/firsttime"><h6 class="tm-font-smaller" style="color:#ECF0F1">FIRST TIME</h6></a>
+                            <a  ng-click="goSpecificTask('firsttime')"><h6 class="tm-font-smaller" style="color:#ECF0F1">FIRST TIME</h6></a>
                         </div>
                     </div>
 
                     <div class="uk-grid uk-text-center uk-margin-top-remove ">
                        <div class="uk-width-1-1 uk-container-center">
-                        <div ng-switch on="loginContent()">
+                        <div  ng-switch on="loginContent()" >
                            
-                            <div ng-switch-when="login"><div ng-include="'/views/login/content/login.html'"></div></div>
-                            <div ng-switch-when="forgetpass"><div ng-include="'/views/login/content/forgetpass.html'"></div></div>
-                            <div ng-switch-when="firsttime"><div ng-include="'/views/login/content/firsttime.html'"></div></div>
+                            <div  ng-switch-when="login"><div ng-include="'/views/login/content/login.html'"></div></div>
+                            <div  ng-switch-when="forgetpass"><div ng-include="'/views/login/content/forgetpass.html'"></div></div>
+                            <div  ng-switch-when="firsttime"><div ng-include="'/views/login/content/firsttime.html'"></div></div>
                             
                         </div>
                         </div>

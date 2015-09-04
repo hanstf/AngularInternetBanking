@@ -15,11 +15,11 @@
 
             <!-- Main content begin here -->
             <div class="uk-width-medium-8-10 uk-width-small-1-1  ">
-                <div class="uk-panel uk-panel-box uk-panel-box-secondary tm-main-panel">
-                    <div class="uk-grid">
+                <div class="uk-panel uk-panel-box uk-panel-box-secondary tm-main-panel tm-account-details-back">
+                    <div class="uk-grid " ng-class="'tm-back-'+removeSpace(getAccountDetails().accounttype)">
                         <div class="uk-width-medium-5-10 uk-width-small-1-1">
                             <div class="uk-align-left">
-                                <h3 class="uk-margin-remove"><b>{{getAccountDetails().accounttype | titleCase}} Account</b></h3>
+                                <div class="uk-margin-remove uk-h3"><b>{{getAccountDetails().accounttype | titleCase}} Account</b></div>
                                 <b>{{getAccountDetails().accountnumber}}</b>
                             </div>
                         </div>
@@ -30,7 +30,7 @@
                                     <b>Available Balance:</b>
                                 </div>
                                 <div class="uk-width-1-6 tm-currency">
-                                    <b>{{getAccountDetails().currency}}</b>
+                                    <b>{{getAccountDetails().currency}}$</b>
                                 </div>
                                 <div class="uk-width-2-6 uk-padding-remove">
                                     <div class="uk-h2 tm-text-vertical-align-top">
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="uk-margin-top">
+                    <div class="uk-margin-top uk-margin-left uk-margin-right">
                         <div ng-repeat="task in mappedtask">
                             <div ng-if="specificContent() == removeSpace(task)">
                                 <div ng-include="'/views/main/account/specific/'+removeSpace(task)+'/template.html'"></div>
@@ -63,13 +63,12 @@
             <div class="uk-width-2-10 uk-hidden-small">
                 <div class="uk-grid">
                     <div class="uk-width-2-10">
-                        <ul class="nav uk-nav uk-text-center tm-position-fixed">
+                        <ul class="nav uk-nav uk-text-center ">
                             <li class="main-account-nav-button" ng-repeat="task in mappedtask" ng-click="gotoAccountSpecific(removeSpace(task), accountData)" ng-class="{'main-account-nav-selected':mainAccountNavSelected('/account/details/'+removeSpace(task))}">
-                                <p class="uk-margin-small-top">
-
+                                <p class="uk-margin-top uk-h5">
+                                      
                                     {{task | titleCase}}
-                                    <br>
-                                    <span class="uk-icon-chevron-left uk-align-left uk-margin-top"></span>
+                                    
                                 </p>
                             </li>
                         </ul>
@@ -88,10 +87,14 @@
                 <ul class="slidee">
                     <li ng-repeat="otherAccount in otherAccountData(getAccountDetails())"   ang-sly>
                         <div class="uk-panel uk-panel-box" ng-class="'tm-back-'+removeSpace(otherAccount.accounttype)">
-                            <h4 class="uk-margin-remove"><b>{{otherAccount.accounttype | titleCase}}</b></h4>
+                            
+                          
+
+                            
+                            <div class="uk-margin-remove uk-h4" ng-class="'tm-back-'+removeSpace(accountlist.accounttype)">
+                            <b>{{otherAccount.accounttype | titleCase}} Account</b></div>
                             <b>{{otherAccount.accountnumber}}</b>
-                            <hr>
-                            <b class="uk-align-right">Available Balance: {{otherAccount.availablebalance}}</b>
+                        <b class="uk-align-center uk-h1 tm-bottom-account"><span class="uk-h4 tm-text-vertical-align-top ">USD$</span> {{otherAccount.availablebalance | currency:""}}</b>
                         </div>
 
                     </li>
